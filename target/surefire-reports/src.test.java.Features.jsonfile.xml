@@ -1,0 +1,16 @@
+<testsuite failures="0" name="src/test/java/Features/jsonfile.feature" skipped="0" tests="1" time="0.940152">
+  <testcase classname="src.test.java.Features.jsonfile" name="Create a user with the given data" time="0.940152">
+    <system-out>* url 'https://gorest.co.in' .............................................. passed
+* def requestPayload = read('classpath:src/test/resources/payload/user.json') . passed
+Given path '/public/v1/users' ............................................. passed
+And request requestPayload ................................................ passed
+And header Authorization = 'Bearer ' + tokenID ............................ passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And match $.data.id == '#present' ......................................... passed
+And match $.data.name == '#present' ....................................... passed
+And match $.data.name == 'Freshta' ........................................ passed
+And match $.data.email == "Freshta16@hotmail.com" ......................... passed
+* print response .......................................................... passed</system-out>
+  </testcase>
+</testsuite>

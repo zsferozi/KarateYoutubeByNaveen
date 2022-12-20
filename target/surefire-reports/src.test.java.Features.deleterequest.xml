@@ -1,0 +1,28 @@
+<testsuite failures="0" name="src/test/java/Features/deleterequest.feature" skipped="0" tests="1" time="1.559466">
+  <testcase classname="src.test.java.Features.deleterequest" name="Delete a user with the given user id" time="1.559466">
+    <system-out>* url 'https://gorest.co.in' .............................................. passed
+* def random_string = ..................................................... passed
+* def randomString = random_string(10) .................................... passed
+* print randomString ...................................................... passed
+* def requestPayload = .................................................... passed
+* requestPayload.email = randomString +"@gmail.com" ....................... passed
+* print requestPayload .................................................... passed
+Given path '/public/v1/users' ............................................. passed
+And request requestPayload ................................................ passed
+And header Authorization = 'Bearer ' + tokenID ............................ passed
+When method post .......................................................... passed
+Then status 201 ........................................................... passed
+And match $.data.id == '#present' ......................................... passed
+* def userId = $.data.id .................................................. passed
+* print userId ............................................................ passed
+Given path '/public/v1/users/' + userId ................................... passed
+And request requestPayload ................................................ passed
+And header Authorization = 'Bearer ' + tokenID ............................ passed
+When method Delete ........................................................ passed
+Then status 204 ........................................................... passed
+Given path '/public/v1/users/' + userId ................................... passed
+When method GET ........................................................... passed
+Then status 404 ........................................................... passed
+And match $.data.message == 'Resource not found' .......................... passed</system-out>
+  </testcase>
+</testsuite>

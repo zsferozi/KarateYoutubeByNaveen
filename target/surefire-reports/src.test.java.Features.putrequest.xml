@@ -1,0 +1,21 @@
+<testsuite failures="1" name="src/test/java/Features/putrequest.feature" skipped="0" tests="1" time="0.730271">
+  <testcase classname="src.test.java.Features.putrequest" name="update a user with the given data" time="0.730271">
+    <failure message="putrequest.feature:18 - status code was: 404, expected: 200, response time: 438, url: https://gorest.co.in/public/v1/users/102, response: {&quot;data&quot;:{&quot;message&quot;:&quot;Resource not found&quot;},&quot;meta&quot;:null}">* url 'https://gorest.co.in' .............................................. passed
+* def requestPayload = .................................................... passed
+Given path '/public/v1/users/102' ......................................... passed
+And request requestPayload ................................................ passed
+And header Authorization = 'Bearer ' + tokenID ............................ passed
+When method put ........................................................... passed
+Then status 200 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: putrequest.feature:18 - status code was: 404, expected: 200, response time: 438, url: https://gorest.co.in/public/v1/users/102, response: {"data":{"message":"Resource not found"},"meta":null}&#13;
+	at ✽.Then status 200 (putrequest.feature:18)&#13;
+
+And match $.data.id == '#present' ......................................... skipped
+And match $.data.name == '#present' ....................................... skipped
+And match $.data.name == 'Aagam Butt' ..................................... skipped
+And match $.data.email == 'Karate@gmail.com' .............................. skipped
+* print response .......................................................... skipped</failure>
+  </testcase>
+</testsuite>

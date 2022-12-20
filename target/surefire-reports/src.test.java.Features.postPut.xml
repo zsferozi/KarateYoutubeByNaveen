@@ -1,0 +1,29 @@
+<testsuite failures="1" name="src/test/java/Features/postPut.feature" skipped="0" tests="1" time="0.731789">
+  <testcase classname="src.test.java.Features.postPut" name="Create a user with the given data" time="0.731789">
+    <failure message="postPut.feature:23 - status code was: 422, expected: 201, response time: 451, url: https://gorest.co.in/public/v1/users, response: {&quot;data&quot;:[{&quot;field&quot;:&quot;email&quot;,&quot;message&quot;:&quot;has already been taken&quot;}],&quot;meta&quot;:null}">* url 'https://gorest.co.in' .............................................. passed
+* def requestPayload = .................................................... passed
+Given path '/public/v1/users' ............................................. passed
+And request requestPayload ................................................ passed
+And header Authorization = 'Bearer ' + tokenID ............................ passed
+When method post .......................................................... passed
+Then status 201 ........................................................... failed
+
+Stack Trace:
+com.intuit.karate.exception.KarateException: postPut.feature:23 - status code was: 422, expected: 201, response time: 451, url: https://gorest.co.in/public/v1/users, response: {"data":[{"field":"email","message":"has already been taken"}],"meta":null}&#13;
+	at ✽.Then status 201 (postPut.feature:23)&#13;
+
+And match $.data.id == '#present' ......................................... skipped
+* def userId = $.data.id .................................................. skipped
+* print userId ............................................................ skipped
+* def requestPayload = .................................................... skipped
+Given path 'public/v1/users/' +userId ..................................... skipped
+And request requestPayload ................................................ skipped
+And header Authorization = 'Bearer ' + tokenID ............................ skipped
+When method put ........................................................... skipped
+Then status 200 ........................................................... skipped
+And match $.data.id == '#present' ......................................... skipped
+And match $.data.name == 'Freshta' ........................................ skipped
+And match $.data.email == 'Freshta24@hotmail.com' ......................... skipped
+* print response .......................................................... skipped</failure>
+  </testcase>
+</testsuite>

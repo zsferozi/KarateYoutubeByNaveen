@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  
+<head>
+<META http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+<meta charset="utf-8">
+    
+<meta content="width=device-width, initial-scale=1, shrink-to-fit=no" name="viewport">
+    
+<link href="res/bootstrap.min.css" rel="stylesheet" type="text/css">
+    
+<link href="res/karate-report.css" rel="stylesheet" type="text/css">
+    
+<link href="favicon.ico" rel="shortcut icon">
+    
+<script src="res/jquery.min.js" type="text/javascript"></script>
+    <script src="res/jquery.tablesorter.min.js" type="text/javascript"></script>
+    <script src="res/bootstrap.min.js" type="text/javascript"></script>
+    <script src="res/karate-report.js" type="text/javascript"></script>
+    
+<title>src.test.java.Features.deleterequest</title>
+  
+</head>
+  
+<body>
+    
+<div id="root-container">
+      
+<div id="leftnav">
+        
+<div class="nav-logo">
+          
+<a href="karate-summary.html">
+            <img alt="Karate" src="res/karate-logo.svg">
+          </a>
+          
+<div class="nav-count">
+            
+<div class="bg-success" id="nav-pass">1</div>
+            
+<div class="bg-danger" id="nav-fail">0</div>
+          
+</div>
+        
+</div>
+        
+<div id="nav-type">Scenarios</div>         
+        
+<div id="nav-date">2022-12-05 04:50:49 PM</div>        
+      
+<div class="nav-container">
+<div class="nav-item passed">
+<a href="#[1:34]">[1:34] Delete a user with the given user id </a>
+</div>
+</div>
+</div>
+      
+<div id="content">
+      
+<div class="page-heading alert alert-primary">
+<a href="karate-summary.html">Summary</a><span class="feature-label">|</span><a href="karate-tags.html">Tags</a><span class="feature-label">|</span><span class="feature-label">Feature:</span><span class="feature-name">src/test/java/Features/deleterequest.feature</span><span class="feature-description">Delete user using delete API</span>
+</div>
+<div class="scenario">
+<div class="scenario-heading" id="[1:34]">
+<div class="heading-container">
+<div class="scenario-tags"></div>
+<span class="scenario-keyword">Scenario: [1:34]</span><span class="scenario-name">Delete a user with the given user id </span>
+</div>
+<div class="scenario-time passed">ms: 1559</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="[1:34]bg">
+<div class="step-ref bg-step">&gt;&gt;</div>
+<div class="step-cell passed">Background:</div>
+</div>
+<div class="time-cell passed"></div>
+</div>
+<div class="step-row" data-parent="[1:34]bg">
+<div class="step-container" id="1">
+<div class="step-ref bg-step">1</div>
+<div class="step-cell passed">* url 'https://gorest.co.in'</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row" data-parent="[1:34]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-cell comment">#this is javascrip for creating random email address</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1:34]bg">
+<div class="step-container">
+<div class="step-ref bg-step"></div>
+<div class="step-cell comment"># this is an end to end testing</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row" data-parent="[1:34]bg">
+<div class="step-container" id="2">
+<div class="step-ref bg-step">2</div>
+<div class="step-cell passed">* def random_string =</div>
+</div>
+<div class="time-cell passed">3</div>
+</div>
+<div class="preformatted" data-parent="2">function(s){
+var text = "";
+var pattern = 'abadb712b0474a94f66082e11cddefb1ae95ea3002e670ae695c4364d17747e8'
+for(var i=0; i&lt;s; i++)
+text += pattern.charAt(Math.floor(Math.random() * pattern.length()));
+return text;
+      
+}</div>
+<div class="step-row" data-parent="[1:34]bg">
+<div class="step-container" id="3">
+<div class="step-ref bg-step">3</div>
+<div class="step-cell passed">* def randomString = random_string(10)</div>
+</div>
+<div class="time-cell passed">15</div>
+</div>
+<div class="step-row" data-parent="[1:34]bg">
+<div class="step-container" id="4">
+<div class="step-ref bg-step">4</div>
+<div class="step-cell passed">* print randomString</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="4">16:50:47.709 [print] 25761a7dea</div>
+<div class="step-row" data-parent="[1:34]bg">
+<div class="step-container" id="5">
+<div class="step-ref bg-step">5</div>
+<div class="step-cell passed">* def requestPayload =</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="preformatted" data-parent="5">{
+        
+    "name": "Freshta",
+    "gender": "female",
+    "status": "inactive"
+}</div>
+<div class="step-row" data-parent="[1:34]bg">
+<div class="step-container" id="6">
+<div class="step-ref bg-step">6</div>
+<div class="step-cell passed">* requestPayload.email = randomString +"@gmail.com"</div>
+</div>
+<div class="time-cell passed">5</div>
+</div>
+<div class="step-row" data-parent="[1:34]bg">
+<div class="step-container" id="7">
+<div class="step-ref bg-step">7</div>
+<div class="step-cell passed">* print requestPayload</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="7">16:50:47.709 [print] {
+  "name": "Freshta",
+  "gender": "female",
+  "status": "inactive",
+  "email": "25761a7dea@gmail.com"
+}</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-cell comment"># create a user using post id</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="8">
+<div class="step-ref passed">8</div>
+<div class="step-cell passed">Given path '/public/v1/users'</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="9">
+<div class="step-ref passed">9</div>
+<div class="step-cell passed">And request requestPayload</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="10">
+<div class="step-ref passed">10</div>
+<div class="step-cell passed">And header Authorization = 'Bearer ' + tokenID</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="11">
+<div class="step-ref passed">11</div>
+<div class="step-cell passed">When method post</div>
+</div>
+<div class="time-cell passed">759</div>
+</div>
+<div class="preformatted" data-parent="11">16:50:47.990 request:
+1 &gt; POST https://gorest.co.in/public/v1/users
+1 &gt; Accept-Encoding: gzip,deflate
+1 &gt; Authorization: Bearer abadb712b0474a94f66082e11cddefb1ae95ea3002e670ae695c4364d17747e8
+1 &gt; Connection: Keep-Alive
+1 &gt; Content-Length: 87
+1 &gt; Content-Type: application/json; charset=UTF-8
+1 &gt; Host: gorest.co.in
+1 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_202)
+{"name":"Freshta","gender":"female","status":"inactive","email":"25761a7dea@gmail.com"}
+
+16:50:48.470 response time in milliseconds: 487.55
+1 &lt; 201
+1 &lt; CF-Cache-Status: DYNAMIC
+1 &lt; CF-RAY: 774fffdf8eda8245-IAD
+1 &lt; Cache-Control: max-age=0, private, must-revalidate
+1 &lt; Connection: keep-alive
+1 &lt; Content-Type: application/json; charset=utf-8
+1 &lt; Date: Mon, 05 Dec 2022 21:50:48 GMT
+1 &lt; NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+1 &lt; Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=ghs6dXnBtcB65QWW%2BnwNsN1%2BEk1%2FyI%2FDjUnOcglKki7BRh8dD5k7EPLRLCylcZ2Vx6c4dyw6y3bXAwqi%2BZczM95zfclh%2FOyyrQ69q9JsLuaeph9oElD7oA2sx9X6KVw%3D"}],"group":"cf-nel","max_age":604800}
+1 &lt; Server: cloudflare
+1 &lt; Transfer-Encoding: chunked
+1 &lt; alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+1 &lt; etag: W/"ab86865277a1018ebafc79809d0793c4"
+1 &lt; location: https://gorest.co.in/public/v1/users/6932
+1 &lt; referrer-policy: strict-origin-when-cross-origin
+1 &lt; vary: Origin
+1 &lt; x-content-type-options: nosniff
+1 &lt; x-download-options: noopen
+1 &lt; x-frame-options: SAMEORIGIN
+1 &lt; x-permitted-cross-domain-policies: none
+1 &lt; x-ratelimit-limit: 90
+1 &lt; x-ratelimit-remaining: 89
+1 &lt; x-ratelimit-reset: 1
+1 &lt; x-request-id: e81af3e0-76b5-4a71-b213-a45b60f05f9a
+1 &lt; x-runtime: 0.075976
+1 &lt; x-xss-protection: 0
+{"meta":null,"data":{"id":6932,"name":"Freshta","email":"25761a7dea@gmail.com","gender":"female","status":"inactive"}}</div>
+<div class="step-row">
+<div class="step-container" id="12">
+<div class="step-ref passed">12</div>
+<div class="step-cell passed">Then status 201</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="13">
+<div class="step-ref passed">13</div>
+<div class="step-cell passed">And match $.data.id == '#present'</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-cell comment"># fetch the user id</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="14">
+<div class="step-ref passed">14</div>
+<div class="step-cell passed">* def userId = $.data.id</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="15">
+<div class="step-ref passed">15</div>
+<div class="step-cell passed">* print userId</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="preformatted" data-parent="15">16:50:48.470 [print] 6932</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-cell comment">#2 delete the same user</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="16">
+<div class="step-ref passed">16</div>
+<div class="step-cell passed">Given path '/public/v1/users/' + userId</div>
+</div>
+<div class="time-cell passed">1</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="17">
+<div class="step-ref passed">17</div>
+<div class="step-cell passed">And request requestPayload</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="18">
+<div class="step-ref passed">18</div>
+<div class="step-cell passed">And header Authorization = 'Bearer ' + tokenID</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="19">
+<div class="step-ref passed">19</div>
+<div class="step-cell passed">When method Delete</div>
+</div>
+<div class="time-cell passed">404</div>
+</div>
+<div class="preformatted" data-parent="19">16:50:48.470 request:
+2 &gt; DELETE https://gorest.co.in/public/v1/users/6932
+2 &gt; Accept-Encoding: gzip,deflate
+2 &gt; Authorization: Bearer abadb712b0474a94f66082e11cddefb1ae95ea3002e670ae695c4364d17747e8
+2 &gt; Connection: Keep-Alive
+2 &gt; Content-Length: 87
+2 &gt; Content-Type: application/json; charset=UTF-8
+2 &gt; Host: gorest.co.in
+2 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_202)
+{"name":"Freshta","gender":"female","status":"inactive","email":"25761a7dea@gmail.com"}
+
+16:50:48.877 response time in milliseconds: 402.66
+2 &lt; 204
+2 &lt; CF-Cache-Status: DYNAMIC
+2 &lt; CF-RAY: 774fffe22ebd7f7e-IAD
+2 &lt; Cache-Control: no-cache
+2 &lt; Connection: keep-alive
+2 &lt; Date: Mon, 05 Dec 2022 21:50:49 GMT
+2 &lt; NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+2 &lt; Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=65jPhhnvu8Bh4NWWb72QazHfqL7%2B5axUsrjhxAk5Srelb%2BgqLr4Nvp0UWk5ralpTlZzf8w5dFL7LebD%2FvIQjlT1Z%2BVeVXA0cwV1SVjXtMTnb9XdGeNIAx79Rx78cU28%3D"}],"group":"cf-nel","max_age":604800}
+2 &lt; Server: cloudflare
+2 &lt; alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+2 &lt; referrer-policy: strict-origin-when-cross-origin
+2 &lt; vary: Origin
+2 &lt; x-content-type-options: nosniff
+2 &lt; x-download-options: noopen
+2 &lt; x-frame-options: SAMEORIGIN
+2 &lt; x-permitted-cross-domain-policies: none
+2 &lt; x-ratelimit-limit: 90
+2 &lt; x-ratelimit-remaining: 89
+2 &lt; x-ratelimit-reset: 2
+2 &lt; x-request-id: f88c65e2-a330-4e5d-9e09-e1dc775573c3
+2 &lt; x-runtime: 0.071831
+2 &lt; x-xss-protection: 0</div>
+<div class="step-row">
+<div class="step-container" id="20">
+<div class="step-ref passed">20</div>
+<div class="step-cell passed">Then status 204</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container">
+<div class="step-ref passed"></div>
+<div class="step-cell comment">#3 get the same userId</div>
+</div>
+<div class="time-cell comment"></div>
+</div>
+<div class="step-row">
+<div class="step-container" id="21">
+<div class="step-ref passed">21</div>
+<div class="step-cell passed">Given path '/public/v1/users/' + userId</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="22">
+<div class="step-ref passed">22</div>
+<div class="step-cell passed">When method GET</div>
+</div>
+<div class="time-cell passed">362</div>
+</div>
+<div class="preformatted" data-parent="22">16:50:48.877 request:
+3 &gt; GET https://gorest.co.in/public/v1/users/6932
+3 &gt; Accept-Encoding: gzip,deflate
+3 &gt; Connection: Keep-Alive
+3 &gt; Host: gorest.co.in
+3 &gt; User-Agent: Apache-HttpClient/4.5.12 (Java/1.8.0_202)
+
+16:50:49.245 response time in milliseconds: 357.26
+3 &lt; 404
+3 &lt; CF-Cache-Status: DYNAMIC
+3 &lt; CF-RAY: 774fffe4bf1e6faf-IAD
+3 &lt; Cache-Control: no-cache
+3 &lt; Connection: keep-alive
+3 &lt; Content-Type: application/json; charset=utf-8
+3 &lt; Date: Mon, 05 Dec 2022 21:50:49 GMT
+3 &lt; NEL: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+3 &lt; Report-To: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=XMv5G4yBC5rrPJpc3QeJ9s2YyNagvyrLgD1Ld942yUX%2FMLLrkb%2BSCyit66KD2tmsS2FWYT%2BGx%2BhteGJTYLI4lfbYRGLQBv9frRhbVGg96owODNdGDxveArl4Rhp8V%2BQ%3D"}],"group":"cf-nel","max_age":604800}
+3 &lt; Server: cloudflare
+3 &lt; Transfer-Encoding: chunked
+3 &lt; alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+3 &lt; referrer-policy: strict-origin-when-cross-origin
+3 &lt; vary: Origin
+3 &lt; x-content-type-options: nosniff
+3 &lt; x-download-options: noopen
+3 &lt; x-frame-options: SAMEORIGIN
+3 &lt; x-permitted-cross-domain-policies: none
+3 &lt; x-request-id: 3a6ccc48-deac-4481-9f3b-d8c127e1a76d
+3 &lt; x-runtime: 0.009000
+3 &lt; x-xss-protection: 0
+{"meta":null,"data":{"message":"Resource not found"}}</div>
+<div class="step-row">
+<div class="step-container" id="23">
+<div class="step-ref passed">23</div>
+<div class="step-cell passed">Then status 404</div>
+</div>
+<div class="time-cell passed">0</div>
+</div>
+<div class="step-row">
+<div class="step-container" id="24">
+<div class="step-ref passed">24</div>
+<div class="step-cell passed">And match $.data.message == 'Resource not found'</div>
+</div>
+<div class="time-cell passed">2</div>
+</div>
+</div>
+</div>
+    
+</div>   
+  
+</body>
+
+</html>
